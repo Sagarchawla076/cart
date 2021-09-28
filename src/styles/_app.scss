@@ -1,0 +1,142 @@
+nav {
+  background-color: var(--color-primary);
+  padding: 1.3rem 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    max-width: 80rem;
+    margin: 0 auto;
+    &__logo {
+      .logo {
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 3.5px;
+      }
+    }
+    &__icon {
+      position: relative;
+      svg {
+        font-size: 4rem;
+      }
+      &--amount {
+        position: absolute;
+        top: -39%;
+        left: 56%;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-primary-light);
+      }
+    }
+  }
+}
+// CART
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 6rem auto;
+  max-width: 80rem;
+  gap: 3rem;
+  &__header {
+    h2 {
+      text-transform: uppercase;
+      font-size: 4rem;
+      letter-spacing: 2.2px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+  }
+  &__total {
+    border-top: 2px solid var(--color-grey);
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+  &__clear {
+    text-transform: uppercase;
+    border: none;
+    color: var(--color-btn);
+    border: 1.5px solid var(--color-btn);
+    padding: 0.7rem 2rem;
+    font-weight: 600;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-bottom: 2rem;
+    &:hover {
+      background-color: var(--color-btn-light);
+    }
+  }
+}
+
+// CART Item
+.item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem;
+  width: 100%;
+  &__info {
+    display: flex;
+    gap: 3rem;
+    &--img {
+      img {
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+    &--details {
+      .company {
+        &--name {
+        }
+        &--price {
+          color: var(--color-grey);
+          letter-spacing: 1.5px;
+        }
+      }
+      .remove {
+        border: none;
+        font-size: 1.6rem;
+        color: var(--color-primary);
+        background-color: #fff;
+        cursor: pointer;
+        letter-spacing: 1.5px;
+        &:hover {
+          color: var(--color-primary-light);
+        }
+      }
+    }
+  }
+  &__amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    svg {
+      cursor: pointer;
+    }
+  }
+}
+
+.empty {
+  color: var(--color-grey);
+  letter-spacing: 2px;
+}
